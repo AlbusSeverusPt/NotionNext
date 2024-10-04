@@ -92,7 +92,8 @@ const Hero = props => {
         id='header-cover'
         alt={siteInfo?.title}
         src={siteInfo?.pageCover}
-        className={`header-cover w-full h-screen object-cover object-center ${siteConfig('HEXO_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}
+        // 原来className的$前的值应为header-cover w-full h-screen object-cover object-center
+        className={`bg-black bg-opacity-20 absolute top-0 w-full h-full py-10 ${siteConfig('HEXO_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}
       />
       <WavesArea />
     </header>
