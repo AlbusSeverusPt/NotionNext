@@ -66,12 +66,12 @@ const Hero = props => {
       <div className='text-white flex flex-col items-center justify-center z-10'>
         {/* 站点标题 */}
         {/* className的值原为font-black text-4xl md:text-5xl shadow-text */}
-        <div className='py-5 font-black text-4xl md:text-5xl shadow-text z-5'>
+        <div className='py-5 font-black text-4xl md:text-5xl shadow-text z-10'>
           {siteInfo?.title || siteConfig('TITLE')}
         </div>
         {/* 站点欢迎语 */}
         {/* className的值原为mt-2 h-12 items-center text-center font-medium shadow-text text-lg */}
-        <div className='h-12 items-center text-center font-medium shadow-text text-lg font-serif z-5'>
+        <div className='h-12 items-center text-center font-medium shadow-text text-lg font-serif z-10'>
           <span id='typed' />
         </div>
 
@@ -97,7 +97,7 @@ const Hero = props => {
         alt={siteInfo?.title}
         src={siteInfo?.pageCover}
         // 原来className的$前的值应为header-cover w-full h-screen object-cover object-center
-        className={`header-cover w-full h-screen object-cover object-center z-1${siteConfig('HEXO_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}
+        className={`header-cover w-full h-screen object-cover object-center z-1 ${siteConfig('HEXO_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}
       />
       <WavesArea />
     </header>
