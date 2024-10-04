@@ -62,13 +62,16 @@ const Hero = props => {
       style={{ zIndex: 1 }}
       // className的值原为w-full h-screen relative bg-black
       className='w-full relative bg-black z-1 h-[50vh] min-h-[25rem] min-w-[25rem] flex flex-col justify-center items-center'>
-      <div className='text-white absolute bottom-0 flex flex-col h-full items-center justify-center w-full '>
+      {/* className的值原为text-white absolute bottom-0 flex flex-col h-full items-center justify-center w-full  */}
+      <div className='text-white flex flex-col items-center justify-center z-10'>
         {/* 站点标题 */}
-        <div className='font-black text-4xl md:text-5xl shadow-text'>
+        {/* className的值原为font-black text-4xl md:text-5xl shadow-text */}
+        <div className='py-5 font-black text-4xl md:text-5xl shadow-text'>
           {siteInfo?.title || siteConfig('TITLE')}
         </div>
         {/* 站点欢迎语 */}
-        <div className='mt-2 h-12 items-center text-center font-medium shadow-text text-lg'>
+        {/* className的值原为mt-2 h-12 items-center text-center font-medium shadow-text text-lg */}
+        <div className='h-12 items-center text-center font-medium shadow-text text-lg font-serif'>
           <span id='typed' />
         </div>
 
