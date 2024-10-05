@@ -45,6 +45,7 @@ export default function RightFloatArea({ floatSlot }) {
       <div
         className={'justify-center  flex flex-col items-center cursor-pointer'}>
         <ButtonDarkModeFloat />
+        <SpotifyPlayer />
         {floatSlot}
         <ButtonJumpToTop />
       </div>
