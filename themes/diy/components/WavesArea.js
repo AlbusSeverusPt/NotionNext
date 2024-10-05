@@ -11,7 +11,8 @@ export default function WavesArea() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 800) {
+      // 当前代码通过 window.innerWidth 判断屏幕宽度，并在小于 800px 时隐藏波动效果。
+      if (window.innerWidth < 480) {
         setShowWave(false)
       } else {
         setShowWave(true)
@@ -47,7 +48,7 @@ export default function WavesArea() {
           <path
             id='gentle-wave'
             // 改变d的值可以实现波动幅度设置
-            d='M -160 44 c 20 0 34 -30 44 -30 s 34 30 44 30 s 34 -30 44 -30 s 34 30 44 30 s 34 -30 44 -30 s 34 30 44 30 v 44 h -352 Z'></path>
+            d='M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z'></path>
         </defs>
         <g className='parallax'>
           <use href='#gentle-wave' x='48' y='0'></use>
