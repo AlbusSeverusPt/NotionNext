@@ -2,6 +2,7 @@ import throttle from 'lodash.throttle'
 import { useCallback, useEffect, useState } from 'react'
 import ButtonDarkModeFloat from './ButtonFloatDarkMode'
 import ButtonJumpToTop from './ButtonJumpToTop'
+import SpotifyPlayer from './SpotifyPlayer'
 
 /**
  * 悬浮在右下角的按钮，当页面向下滚动100px时会出现
