@@ -3,6 +3,7 @@ import { useGlobal } from '@/lib/global'
 import { useState } from 'react'
 // import CONFIG from '../config'
 
+// SpotifyPlayer.js这个组件已被弃用
 /**
  * 跳转到网页顶部
  * 当屏幕下滑500像素后会出现该控件
@@ -39,7 +40,7 @@ return (
           style={{
             display: isIframeVisible ? 'block' : 'none',
             borderRadius: '12px', // 添加 border-radius 样式
-            left: '10px',  // 设置右边距为 1px
+            left: '10px',  // 设置左边距为 1px
             bottom: '0'   // 紧贴页面底部
           }}
         ></iframe>

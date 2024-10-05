@@ -2,7 +2,6 @@ import throttle from 'lodash.throttle'
 import { useCallback, useEffect, useState } from 'react'
 import ButtonDarkModeFloat from './ButtonFloatDarkMode'
 import ButtonJumpToTop from './ButtonJumpToTop'
-import SpotifyPlayer from './SpotifyPlayer'
 
 /**
  * 悬浮在右下角的按钮，当页面向下滚动100px时会出现
@@ -46,7 +45,6 @@ export default function RightFloatArea({ floatSlot }) {
       <div
         className={'justify-center  flex flex-col items-center cursor-pointer'}>
         <ButtonDarkModeFloat />
-        <SpotifyPlayer />
         {floatSlot}
         <ButtonJumpToTop />
       </div>
