@@ -30,7 +30,7 @@ return (
         <iframe
           src="https://open.spotify.com/embed/playlist/1QyiNXnjsUU32VgsEeBMJZ?utm_source=generator"
           className="absolute"
-          width="100%"
+          width= "500"
           height="152"
           frameBorder="0"
           allowfullscreen=""
@@ -39,7 +39,7 @@ return (
           style={{
             display: isIframeVisible ? 'block' : 'none',
             borderRadius: '12px', // 添加 border-radius 样式
-            left: '5px',  // 设置右边距为 1px
+            left: '10px',  // 设置右边距为 1px
             bottom: '0'   // 紧贴页面底部
           }}
         ></iframe>
