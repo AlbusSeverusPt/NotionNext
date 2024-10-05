@@ -35,7 +35,7 @@ export default function RightFloatArea({ floatSlot }) {
   return (
     <div
       className={
-        (showFloatButton ? 'opacity-100 ' : 'invisible opacity-0') +
+        (showFloatButton ? 'opacity-100 ' : 'hidden') +
         '  duration-300 transition-all bottom-12 right-1 fixed justify-end z-20  text-white bg-indigo-500 dark:bg-hexo-black-gray rounded-sm'
       }>
       <div
