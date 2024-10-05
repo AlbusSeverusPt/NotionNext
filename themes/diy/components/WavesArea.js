@@ -12,7 +12,7 @@ export default function WavesArea() {
   useEffect(() => {
     const handleResize = () => {
       // 当前代码通过 window.innerWidth 判断屏幕宽度，并在小于 800px 时隐藏波动效果。
-      if (window.innerWidth < 480) {
+      if (window.innerWidth < 100) {
         setShowWave(false)
       } else {
         setShowWave(true)
