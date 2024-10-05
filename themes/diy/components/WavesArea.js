@@ -47,7 +47,7 @@ export default function WavesArea() {
           <path
             id='gentle-wave'
             // 改变d的值可以实现波动幅度设置
-            d='M -160 44 c 20 0 34 -18 44 -18 s 34 18 44 18 s 34 -18 44 -18 s 34 18 44 18 s 34 -18 44 -18 s 34 18 44 18 v 44 h -352 Z'></path>
+            d='M -160 44 c 20 0 34 -30 44 -30 s 34 30 44 30 s 34 -30 44 -30 s 34 30 44 30 s 34 -30 44 -30 s 34 30 44 30 v 44 h -352 Z'></path>
         </defs>
         <g className='parallax'>
           <use href='#gentle-wave' x='48' y='0'></use>
