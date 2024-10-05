@@ -62,25 +62,16 @@ const Hero = props => {
       style={{ zIndex: 1 }}
       // className的值原为w-full h-screen relative bg-black
       className='w-full relative bg-black z-1 h-[50vh] min-h-[25rem] min-w-[25rem] flex flex-col justify-center items-center'>
-      
-      <LazyImage
-        id='header-cover'
-        alt={siteInfo?.title}
-        src={siteInfo?.pageCover}
-        // 原来className的$前的值应为header-cover w-full h-screen object-cover object-center
-        className={`header-cover w-full h-screen object-cover object-center z-1 ${siteConfig('HEXO_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}
-      />
-      
       {/* className的值原为text-white absolute bottom-0 flex flex-col h-full items-center justify-center w-full  */}
-      <div className='text-white flex flex-col items-center justify-center z-10'>
+      <div className='text-white absolute bottom-0 flex flex-col h-full items-center justify-center w-full'>
         {/* 站点标题 */}
         {/* className的值原为font-black text-4xl md:text-5xl shadow-text */}
-        <div className='py-5 font-black text-4xl md:text-5xl shadow-text z-10'>
+        <div className='font-black text-4xl md:text-5xl shadow-text'>
           {siteInfo?.title || siteConfig('TITLE')}
         </div>
         {/* 站点欢迎语 */}
         {/* className的值原为mt-2 h-12 items-center text-center font-medium shadow-text text-lg */}
-        <div className='h-12 items-center text-center font-medium shadow-text text-lg font-serif z-10'>
+        <div className='mt-2 h-12 items-center text-center font-medium shadow-text text-lg'>
           <span id='typed' />
         </div>
 
@@ -100,6 +91,14 @@ const Hero = props => {
           <i className='opacity-70 animate-bounce fas fa-angle-down' />
         </div>
       </div>
+
+      <LazyImage
+        id='header-cover'
+        alt={siteInfo?.title}
+        src={siteInfo?.pageCover}
+        // 原来className的$前的值应为header-cover w-full h-screen object-cover object-center
+        className={`header-cover w-full h-screen object-cover object-center z-1 ${siteConfig('HEXO_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}
+      />
       <WavesArea />
     </header>
   )
