@@ -28,10 +28,18 @@ return (
       <div title={locale.POST.TOP} ><i className='fas fa-arrow-up text-xs' /></div>
       {isIframeVisible && (
         <iframe
-          src="https://example.com"
-          title="example iframe"
+          src="https://open.spotify.com/embed/playlist/1QyiNXnjsUU32VgsEeBMJZ?utm_source=generator"
           className="absolute top-0 left-0"
-          style={{ display: isIframeVisible ? 'block' : 'none' }}
+          width="100%"
+          height="152"
+          frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          style={{
+            display: isIframeVisible ? 'block' : 'none',
+            borderRadius: '12px', // 添加 border-radius 样式
+          }}
         ></iframe>
       )}
     </div>
