@@ -24,12 +24,12 @@ const SpotifyPlayer = () => {
 //   }
 
 return (
-    <div className='relative space-x-1 items-center justify-center transform hover:scale-105 duration-200 w-7 h-auto pb-1 text-center' onClick={toggleIframeVisibility} >
+    <div className='relative space-x-1 items-center justify-center transform hover:scale-105 duration-200 w-7 h-auto pb-1 text-center overflow-visible' onClick={toggleIframeVisibility} >
       <div title={locale.POST.TOP} ><i className='fas fa-arrow-up text-xs' /></div>
       {isIframeVisible && (
         <iframe
           src="https://open.spotify.com/embed/playlist/1QyiNXnjsUU32VgsEeBMJZ?utm_source=generator"
-          className="absolute top-0 left-0"
+          className="absolute"
           width="100%"
           height="152"
           frameBorder="0"
@@ -39,6 +39,8 @@ return (
           style={{
             display: isIframeVisible ? 'block' : 'none',
             borderRadius: '12px', // 添加 border-radius 样式
+            right: '1px',  // 设置右边距为 1px
+            bottom: '0'   // 紧贴页面底部
           }}
         ></iframe>
       )}
