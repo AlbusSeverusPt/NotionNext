@@ -26,7 +26,8 @@ export default function RightFloatArea({ floatSlot }) {
       }
     }, 200)
   )
-
+  
+  // []为空时，scrollListener只会执行一次；[] 有scrollListener时，scrollListener会执行多次
   useEffect(() => {
     document.addEventListener('scroll', scrollListener)
     return () => document.removeEventListener('scroll', scrollListener)
