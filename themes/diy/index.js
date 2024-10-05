@@ -53,7 +53,7 @@ const LayoutBase = props => {
   const { post, children, slotTop, className } = props
   const { onLoading, fullWidth } = useGlobal()
   const router = useRouter()
-  {/* 是否打开悬浮菜单的随机文章导航按钮，被我始终置为false，原语句为const showRandomButton = siteConfig('HEXO_MENU_RANDOM', false, CONFIG) */}
+  {/* 是否打开悬浮菜单的随机文章按钮，我始终置为false。原语句为const showRandomButton = siteConfig('HEXO_MENU_RANDOM', false, CONFIG) */}
   const showRandomButton = false
 
   const headerSlot = post ? (
