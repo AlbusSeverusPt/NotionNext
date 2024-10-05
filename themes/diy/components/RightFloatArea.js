@@ -10,25 +10,27 @@ import ButtonJumpToTop from './ButtonJumpToTop'
  */
 export default function RightFloatArea({ floatSlot }) {
   const [showFloatButton, switchShow] = useState(false)
-  const scrollListener = () => {
-    const targetRef = document.getElementById('wrapper')
-    const clientHeight = targetRef?.clientHeight
-    const scrollY = window.pageYOffset
-    const fullHeight = clientHeight - window.outerHeight
-    let per = parseFloat(((scrollY / fullHeight) * 100).toFixed(0))
-    if (per > 100) per = 100
-    const shouldShow = scrollY > 100 && per > 0
+  const scrollListener = useCallback(
+    throttle(() => {
+      const targetRef = document.getElementById('wrapper')
+      const clientHeight = targetRef?.clientHeight
+      const scrollY = window.pageYOffset
+      const fullHeight = clientHeight - window.outerHeight
+      let per = parseFloat(((scrollY / fullHeight) * 100).toFixed(0))
+      if (per > 100) per = 100
+      const shouldShow = scrollY > 100 && per > 0
 
-    if (shouldShow !== showRightFloat) {
-      switchShow(shouldShow)
-    }
-    changePercent(per)
-  }
+      // 右下角显示悬浮按钮
+      if (shouldShow !== showFloatButton) {
+        switchShow(shouldShow)
+      }
+    }, 200)
+  )
 
   useEffect(() => {
     document.addEventListener('scroll', scrollListener)
     return () => document.removeEventListener('scroll', scrollListener)
-  }, [])
+  }, [scrollListener])
 
   return (
     <div
