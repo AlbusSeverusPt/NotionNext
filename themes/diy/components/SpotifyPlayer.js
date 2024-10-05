@@ -39,7 +39,7 @@ return (
           style={{
             display: isIframeVisible ? 'block' : 'none',
             borderRadius: '12px', // 添加 border-radius 样式
-            right: '1px',  // 设置右边距为 1px
+            left: '5px',  // 设置右边距为 1px
             bottom: '0'   // 紧贴页面底部
           }}
         ></iframe>
