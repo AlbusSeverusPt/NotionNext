@@ -1,6 +1,6 @@
-import { siteConfig } from '@/lib/config'
+// import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
-import CONFIG from '../config'
+// import CONFIG from '../config'
 
 /**
  * 跳转到网页顶部
@@ -10,7 +10,7 @@ import CONFIG from '../config'
  * @returns {JSX.Element}
  * @constructor
  */
-const SpotifyPlayer = ({ showPercent = true, percent }) => {
+const SpotifyPlayer = () => {
   const { locale } = useGlobal()
   const [isIframeVisible, setIsIframeVisible] = useState(false)
   const toggleIframeVisibility = () => {
@@ -23,17 +23,18 @@ const SpotifyPlayer = ({ showPercent = true, percent }) => {
 //   }
 
 return (
-    <div className='relative space-x-1 items-center justify-center transform hover:scale-105 duration-200 w-7 h-auto pb-1 text-center' onClick={toggleIframeVisibility} >
-      <div title={locale.POST.TOP} ><i className='fas fa-arrow-up text-xs' /></div>
-      {isIframeVisible && (
-        <iframe
-          src="https://example.com"
-          title="example iframe"
-          className="absolute top-0 left-0"
-          style={{ display: isIframeVisible ? 'block' : 'none' }}
-        ></iframe>
-      )}
-    </div>
+    <div>恭喜发财</div>
+    // <div className='relative space-x-1 items-center justify-center transform hover:scale-105 duration-200 w-7 h-auto pb-1 text-center' onClick={toggleIframeVisibility} >
+    //   <div title={locale.POST.TOP} ><i className='fas fa-arrow-up text-xs' /></div>
+    //   {isIframeVisible && (
+    //     <iframe
+    //       src="https://example.com"
+    //       title="example iframe"
+    //       className="absolute top-0 left-0"
+    //       style={{ display: isIframeVisible ? 'block' : 'none' }}
+    //     ></iframe>
+    //   )}
+    // </div>
   )
 
 }
