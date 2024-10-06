@@ -5,6 +5,7 @@ import { useGlobal } from '@/lib/global'
 import { formatDateFmt } from '@/lib/utils/formatDate'
 import Link from 'next/link'
 import TagItemMini from './TagItemMini'
+import WavesArea from './WavesArea'
 
 /**
  * 文章详情页的Hero块
@@ -30,6 +31,7 @@ export default function PostHero({ post, siteInfo }) {
         src={headerImage}
         className='w-full h-full object-cover object-center absolute top-0'
       />
+      <WavesArea />
 
       <header
         id='article-header-cover'

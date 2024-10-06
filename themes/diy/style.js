@@ -13,6 +13,28 @@ const Style = () => {
     .dark body{
         background-color: black;
     }
+        
+    // 文章封面斜切效果
+    .left-clip-path {
+        -webkit-clip-path: polygon(0 0,92% 0,100% 100%,0 100%);
+        clip-path: polygon(0 0,92% 0,100% 100%,0 100%);
+    }
+    .right-clip-path {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+    }
+        
+    @media (min-width: 768px) {
+    .md\:left-clip-path { 
+        -webkit-clip-path: polygon(0 0, 92% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 92% 0, 100% 100%, 0 100%);
+    }
+
+    .md\:right-clip-path {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+    }
+    }
   
     /*  菜单下划线动画 */
     #theme-hexo .menu-link {
