@@ -40,7 +40,7 @@ export default function RightFloatArea({ floatSlot }) {
       data-aos-anchor-placement="top-center"
       className={
         (showFloatButton ? 'opacity-100 ' : 'invisible opacity-0') +
-        '  duration-300 transition-all bottom-12 left-1 fixed justify-end z-20  text-white bg-indigo-500 dark:bg-hexo-black-gray rounded-sm'
+        '  duration-300 transition-all bottom-12 left-1 fixed justify-end z-20  text-white bg-custom-blue dark:bg-hexo-black-gray rounded-md'
       }>
       <div
         className={'justify-center  flex flex-col items-center cursor-pointer'}>

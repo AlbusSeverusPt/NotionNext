@@ -14,6 +14,11 @@ const Style = () => {
         background-color: black;
     }
         
+    // RightFloatArea颜色自定义
+    .bg-custom-blue {
+        background-color: #185A9D
+    }
+        
     // 文章封面斜切效果
     .left-clip-path {
         -webkit-clip-path: polygon(0 0,92% 0,100% 100%,0 100%);
